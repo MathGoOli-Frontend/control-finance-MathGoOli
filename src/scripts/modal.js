@@ -1,4 +1,6 @@
 /* Desenvolva sua lógica aqui */
+import {addNewData} from "./dataHandle.js"
+import {cardHandle, deckHandle, navFilterHandle} from './deckHandle.js'
 
 export function handleModal(){
     const button = document.getElementsByClassName('header__button')[0]
@@ -19,4 +21,34 @@ export function handleModalCloseButton(){
             modal.close()
         })
     })
+}
+
+export function handleModalSubmitButton(){
+    const submitButton = document.querySelector(".register__submit")
+    const inputs = document.querySelectorAll(".register__input")
+    
+    submitButton.addEventListener('click',(event) => {
+        event.preventDefault()
+        inputs.forEach(input => {
+            if(input.value === ""){
+                
+                return alert("input sem valor")
+            }
+        })
+
+        let value = Number(inputs[0].value)
+        inputs[0].value = ""
+        let category = undefined
+        if (inputs[1].checked){
+            category = 0
+        } else if (inputs[2].checked){
+            category = 1
+        }
+
+        addNewData(value, category)
+        deckHandle()
+
+})
+
+
 }
