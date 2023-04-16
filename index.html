@@ -29,7 +29,8 @@
     </header>
     <main id="app main__container">
       <section class="container nav__container">
-        <h2 class="nav__title">Resumo Financeiro</h2>
+        <div class="nav__resume">
+          <h2 class="nav__title">Resumo Financeiro</h2>
         <nav class="nav__filter">
           <input class="nav__radio radio__btn radio__btn-1" value="all" type="radio" id="all" name="filter" checked>
           <label class="nav__label nav__label-1" for="all" value="all">Todos</label>
@@ -38,8 +39,10 @@
           <label class="nav__label nav__label-2" for="entry" >Entradas</label>
 
           <input class="nav__radio radio__btn radio__btn-3" value="outflow" type="radio" id="outflow" name="filter">
-          <label class="nav__label nav__label-3" for="outflow">Saída</label>
+          <label class="nav__label nav__label-3" for="outflow">Saídas</label>
         </nav>
+        </div>
+        
         <div class="nav__total">
             <span class="nav__text">Soma dos valores:</span>
             <span class="nav__totalValue">R$ 00,00</span>
@@ -75,10 +78,11 @@
         
         <form class="register__form">
           <div class="register__div">
-            <label for="valor">Valor</label>
+            <label class="register__title" for="valor">Valor</label>
             <input name="valor" type="number" class="register__input">
           </div>
-          <div class="register__div">
+          <div class="register__div register__div-radio">
+            <h3 class="register__title">Tipo de valor</h3>
             <input class="register__input register__radio register__radio-btn1" type="radio" name="type" id="register__entry" checked>
             <label for="register__entry" class="register__entry register__radio-1">Entrada</label>
             

@@ -32,7 +32,11 @@
     gap: 20px;
 
 }
-
+.nav__resume{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 .nav__title{
     font-size: var(--font-size-1);
     font-family: var(--font-family-1);
@@ -84,6 +88,8 @@
     padding-top: 10px;
 }
 
+
+
 .deck__container{
     display: flex;
     flex-direction: column;
@@ -92,6 +98,8 @@
 
 .card__container{
     padding: 10px;
+
+    width: 90vw;
     list-style-type: none;
     display: flex;
     
@@ -122,17 +130,24 @@
 
 /* register */
 .register__dialog{
-    width: 95%;
     border: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
 }
 
 .register__containner{
     padding: 15px;
+    width: 90vw;
+    height: 65vh;
 }
 .register__header{
     display: flex;
-    justify-content:space-around;
+    justify-content:space-between;
     align-items: center;
+    padding-bottom: 20px;
 }
 
 .register__title{
@@ -162,17 +177,24 @@
 
     gap: 5px;
 }
+
+.register__title{
+    font-size: var(--font-size-2);
+}
+
 .register__input{
-    width: 80%;
+    width: 99%;
+    height: 40px;
 }
 
 .register__entry{
-    padding: 2px 5px;
+    padding: 9px 5px;
     background-color: var(--fixed-white);
     color: var(--color-grey-1);
     border-radius: var(--radius-1);
     border: 2px solid var(--color-grey-4);
     font-weight: var(--font-weight-2);
+    text-align: center;
 }
 .register__radio{
     display: none;
@@ -207,4 +229,68 @@
 .register__submit{
     background-color: var(--color-brand-1);
     color: var(--fixed-white);
+}
+
+@media (min-width: 768px){
+    .main__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .header__container{
+        height: 10vh;
+        flex-direction: row;
+        align-self: center;
+        align-items: center;
+    }
+    .header__button{
+        width: 200px;
+    }
+    .nav__resume{
+        width: 90vw;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+    .nav__title{
+        
+    }
+    
+    .nav__total{
+        align-self: center;
+        width: 60vw;
+    }
+    
+    .card__container{
+        width: 42vw;
+        align-self: center;
+    }
+    .nav__container{
+        width: 100vw;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .register__containner{
+        padding: 15px;
+        width: 40vw;
+        height: 35vh;
+    }
+
+
+    .register__div-radio{
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        
+    }
+
+    .register__entry{
+        height: 28px;
+        padding: 3px;
+        text-align: center;
+
+    }
 }
