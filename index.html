@@ -14,13 +14,84 @@
       name="description"
       content="Control Finance - Seu controle financeiro"
     />
+
+    <!-- css -->
     <link rel="stylesheet" href="./src/styles/globalStyles.css" />
     <link rel="stylesheet" href="./src/styles/index.css" />
+
+    <!-- javacript -->
+    <script type="module" src="./src/scripts/index.js" defer></script>
   </head>
   <body>
-    <main id="app"></main>
-    <script src="./src/scripts/modal.js"></script>
-    <script src="./src/scripts/valuesData.js"></script>
-    <script src="./src/scripts/index.js"></script>
+    <header class="header__container">
+      <img class="header__logo" src="./src/assets/Logo - Control Finance.svg" alt="">
+      <button class="header__button">Registrar novo valor</button>
+    </header>
+    <main id="app main__container">
+      <section class="container nav__container">
+        <h2 class="nav__title">Resumo Financeiro</h2>
+        <nav class="nav__filter">
+          <input class="radio__btn radio__btn-1" value="all" type="radio" id="all" name="filter" checked>
+          <label class="nav__label nav__label-1" for="all" value="all">Todos</label>
+
+          <input class="radio__btn radio__btn-2" value="entry" type="radio" id="entry" name="filter">
+          <label class="nav__label nav__label-2" for="entry" >Entradas</label>
+
+          <input class="radio__btn radio__btn-3" value="outflow" type="radio" id="outflow" name="filter">
+          <label class="nav__label nav__label-3" for="outflow">Saída</label>
+        </nav>
+        <div class="nav__total">
+            <span class="nav__text">Soma dos valores:</span>
+            <span class="nav__totalValue">R$ 00,00</span>
+        </div>
+      </section>
+      <section class="container app__main">
+        <ul class="deck__container">
+          <li class="card__container">
+            <span class="card__value">R$ 300,00</span>
+            <span class="card__type">Entrada</span>
+            <img src="./src/assets/trash.svg" alt="" class="card__button">
+          </li>
+          <li class="card__container">
+            <span class="card__value">R$ 300,00</span>
+            <span class="card__type">Entrada</span>
+            <img src="./src/assets/trash.svg" alt="" class="card__button">
+          </li>
+          <li class="card__container">
+            <span class="card__value">R$ 300,00</span>
+            <span class="card__type">Entrada</span>
+            <img src="./src/assets/trash.svg" alt="" class="card__button">
+          </li>
+        </ul>
+      </section>
+    </main>
+    <dialog class="register__dialog">
+      <div class="register__containner">
+        <div class="register__header">
+          <h1 class="register__title">Registro de Valor</h1>
+          <span class="register__close">x</span>
+        </div>
+        <p class="register__instruction">Digite o valor e em seguida aperte no botão referente ao tipo do valor</p>
+        
+        <form class="register__form">
+          <div class="register__div">
+            <label for="valor">Valor</label>
+            <input name="valor" type="number" class="register__input">
+          </div>
+          <div class="register__div">
+            <input class="register__input register__radio register__radio-btn1" type="radio" name="type" id="register__entry">
+            <label for="register__entry" class="register__entry register__radio-1">Entrada</label>
+            
+            <input class="register__input register__radio register__radio-btn2" type="radio" name="type" id="register__out">
+            <label for="register__out" class="register__entry register__radio-2">saida</label>
+          </div>
+          <div class="register__div register__buttons">
+            <button class="register__close register__cancel">Cancelar</button>
+            <button class="register__submit">Inserir Valor</button>
+          </div>
+        </form>
+
+      </div>
+    </dialog>
   </body>
 </html>

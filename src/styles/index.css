@@ -1,1 +1,210 @@
 /* Desenvolva a estilização da sua página aqui */
+.header__container{
+    width: 100vw;
+    height: 20vh;
+    background-color: var(--color-grey-4);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 20;
+    padding: 2vh 5vw 2vh 5vw;
+}
+
+.header__button{
+    width: 95%;
+
+    font: var(--font-family-2);
+    align-self: center;
+    background-color: var(--color-brand-1);
+    color:  var(--color-brand-3);
+    border: none;
+    padding: 10px 0;
+    border-radius: var(--radius-1);
+}
+
+.nav__container{
+    /* background-color: brown; */
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.nav__title{
+    font-size: var(--font-size-1);
+    font-family: var(--font-family-1);
+}
+
+.radio__btn{
+    display: none;
+}
+
+/* radio not checked*/
+.nav__label{
+    padding: 2px 5px;
+    background-color: var(--fixed-white);
+    color: var(--color-grey-1);
+    border-radius: var(--radius-1);
+    border: 2px solid var(--color-grey-4);
+    font-weight: var(--font-weight-2);
+}
+/* radio checked */
+.radio__btn-1:checked:checked ~ .nav__label-1,
+.radio__btn-2:checked:checked ~ .nav__label-2,
+.radio__btn-3:checked:checked ~ .nav__label-3{
+    
+    background-color: var(--color-brand-3);
+    color: var(--color-brand-2);
+    
+    border: 2px solid var(--color-brand-2);
+}
+
+.nav__total{
+    width: 90vw;
+    height: 10vh;
+    padding: 0 10px 0 10px;
+    border-radius: var(--radius-2);
+
+    background-color: var(--color-grey-4);
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__text, .nav__totalValue{
+    font: var(--font-weight-1);
+    font-family: "Nunito";
+}
+
+.app__main{
+    padding-top: 10px;
+}
+
+.deck__container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card__container{
+    padding: 10px;
+    list-style-type: none;
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+    
+
+    border: 2px solid var(--color-grey-4);
+    border-radius: var(--radius-1);
+}
+
+.card__type{
+    padding: 3px;
+    background-color: var(--color-grey-4);
+    border-radius: var(--radius-2);
+}
+
+.card__button{
+    padding: .5rem;
+    border: 2px solid var(--color-grey-4);
+    border-radius: var(--radius-2);
+
+}
+
+.card__button:hover{
+    background-color: var(--color-grey-4);
+}
+
+/* register */
+.register__dialog{
+    width: 95%;
+    border: none;
+}
+
+.register__containner{
+    padding: 15px;
+}
+.register__header{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.register__title{
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-1);
+}
+
+.register__close{
+    width: 2rem;
+    height: 1.5rem;
+    border-radius: var(--radius-1);
+    text-align: center;
+    background-color: var(--color-grey-5);
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-1);
+}
+
+.register__instruction{
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-3);
+}
+
+.register__div{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+.register__input{
+    width: 80%;
+}
+
+.register__entry{
+    padding: 2px 5px;
+    background-color: var(--fixed-white);
+    color: var(--color-grey-1);
+    border-radius: var(--radius-1);
+    border: 2px solid var(--color-grey-4);
+    font-weight: var(--font-weight-2);
+}
+.register__radio{
+    display: none;
+}
+
+.register__radio-btn1:checked:checked ~ .register__radio-1,
+.register__radio-btn2:checked:checked ~ .register__radio-2{
+    background-color: var(--color-brand-3);
+    color: var(--color-brand-2);
+    
+    border: 2px solid var(--color-brand-2);
+}
+
+.register__buttons{
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.register__cancel, .register__submit{
+    width: 60%;
+    height: 30px;
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-2);
+
+    font-weight: var(--font-weight-2);
+
+    border-radius: var(--radius-2);
+    border: 2px solid var(--color-grey-4);
+    background-color: var(--color-grey-4);
+}
+
+.register__submit{
+    background-color: var(--color-brand-1);
+    color: var(--fixed-white);
+}
