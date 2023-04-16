@@ -4,6 +4,7 @@ import {insertedValues, valuesCategory} from "./valuesData.js"
 
 export function removeData(id){
     const index = insertedValues.findIndex(element => element.id === id)
+    
     insertedValues.splice(index, 1)
 }
 
@@ -15,7 +16,7 @@ function newID (){
         }
     })
 
-    return newid
+    return newid + 1
 }
 
 export function addNewData(cardValue, cardCategoryID){
@@ -23,5 +24,7 @@ export function addNewData(cardValue, cardCategoryID){
         id: newID(),
         value: cardValue, 
         categoryID: cardCategoryID})
+    
+        
 
 }

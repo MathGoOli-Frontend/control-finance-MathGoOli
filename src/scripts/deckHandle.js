@@ -31,8 +31,8 @@ function excludeButtonHandle(){
         button.addEventListener("click", (event) => {
             const id = event.target.dataset.cardId
 
-            console.log(parseInt(id))
-            removeData(id)
+            
+            removeData(parseInt(id))
             deckHandle()
         })
     })
