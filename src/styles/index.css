@@ -67,7 +67,7 @@
 }
 
 .nav__total{
-    width: 90vw;
+    width: 99%;
     height: 10vh;
     padding: 0 10px 0 10px;
     border-radius: var(--radius-2);
@@ -99,7 +99,7 @@
 .card__container{
     padding: 10px;
 
-    width: 90vw;
+    width: 99%;
     list-style-type: none;
     display: flex;
     
@@ -185,6 +185,12 @@
 .register__input{
     width: 99%;
     height: 40px;
+    border-radius: var(--radius-1);
+    border: 2px solid var(--color-grey-3);
+    outline: none;
+}
+.register__input:focus{
+    border: 2px solid var(--color-brand-1);
 }
 
 .register__entry{
@@ -233,6 +239,7 @@
 
 @media (min-width: 768px){
     .main__container{
+        
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -248,7 +255,7 @@
         width: 200px;
     }
     .nav__resume{
-        width: 90vw;
+        width: 99%;
         flex-direction: row;
         justify-content: space-between;
         
@@ -259,24 +266,33 @@
     
     .nav__total{
         align-self: center;
+        width: 99%;
+    }
+    .app__main{
         width: 60vw;
     }
     
     .card__container{
-        width: 42vw;
+        width: 99%;
         align-self: center;
     }
     .nav__container{
-        width: 100vw;
+        width: 60vw;
         justify-content: center;
         flex-direction: row;
         flex-wrap: wrap;
     }
 
+    .register__dialog{
+        border-radius: var(--radius-1);
+    }
+
     .register__containner{
         padding: 15px;
-        width: 40vw;
-        height: 35vh;
+        width: 35vw;
+        height: 45vh;
+
+        border-radius: var(--radius-1);
     }
 
 

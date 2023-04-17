@@ -38,15 +38,17 @@ export function handleModalSubmitButton(){
 
         let value = Number(inputs[0].value)
         inputs[0].value = ""
+
         let category = undefined
         if (inputs[1].checked){
             category = 0
         } else if (inputs[2].checked){
             category = 1
         }
-
-        addNewData(value, category)
-        deckHandle()
+        if (!value === 0){
+            addNewData(value, category)
+            deckHandle()
+        }
 
 })
 
