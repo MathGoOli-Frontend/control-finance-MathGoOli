@@ -27,8 +27,10 @@ export function handleModalSubmitButton(){
     const submitButton = document.querySelector(".register__submit")
     const inputs = document.querySelectorAll(".register__input")
     
+    
     submitButton.addEventListener('click',(event) => {
         event.preventDefault()
+
         inputs.forEach(input => {
             if(input.value === ""){
                 
@@ -36,8 +38,11 @@ export function handleModalSubmitButton(){
             }
         })
 
-        let value = Number(inputs[0].value)
+        let value = parseFloat(inputs[0].value)
         inputs[0].value = ""
+
+        console.log(value)
+        console.log(typeof value === "number")
 
         let category = undefined
         if (inputs[1].checked){
@@ -45,9 +50,10 @@ export function handleModalSubmitButton(){
         } else if (inputs[2].checked){
             category = 1
         }
-        if (!value === 0){
+        if (typeof value === "number"){
             addNewData(value, category)
             deckHandle()
+            
         }
 
 })

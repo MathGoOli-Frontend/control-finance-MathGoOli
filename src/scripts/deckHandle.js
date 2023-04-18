@@ -1,5 +1,6 @@
 import {insertedValues, valuesCategory} from "./valuesData.js"
 import { removeData } from "./dataHandle.js"
+
 export function cardHandle({id, value, categoryID}){
     // cria cards
     const li = document.createElement('li')
@@ -8,6 +9,9 @@ export function cardHandle({id, value, categoryID}){
     const cardValue = document.createElement('span')
     cardValue.innerText = value.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
     cardValue.className = "card__value"
+
+    const div = document.createElement('div')
+    div.className = "card__right"
 
     const cardType = document.createElement('span')
     cardType.innerText = valuesCategory[categoryID]
@@ -18,7 +22,8 @@ export function cardHandle({id, value, categoryID}){
     excludeButton.className = "card__button"
     excludeButton.dataset.cardId = id
 
-    li.append(cardValue, cardType, excludeButton)
+    div.append(cardType, excludeButton)
+    li.append(cardValue, div)
 
     return li
 
